@@ -9,6 +9,7 @@ spec:
   containers:
   - image: iam7hills/dockerdemo:nginx-green
     name: nginxgreen
+    imagePullPolicy: Always
     ports:
     - containerPort: 80
     resources: {}
