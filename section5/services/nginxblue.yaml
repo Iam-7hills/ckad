@@ -8,6 +8,7 @@ metadata:
 spec:
   containers:
   - image: iam7hills/dockerdemo:nginx-blue
+    imagePullPolicy: Always
     name: nginxblue
     ports:
     - containerPort: 80
