@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-green-nginx
+  labels:
+    app: nginx-green
+spec:
+  containers:
+    - name: nginx-container
+      image: iam7hills/dockerdemo:nginx-green
+      ports:
+        - containerPort: 80
+

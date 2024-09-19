@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /  # Ensures path is rewritten to root
+spec:
+  rules:
+    - host: iam7hills.com  # Replace with your domain or IP
+      http:
+        paths:
+          - path: /green
+            pathType: Prefix
+            backend:
+              service:
+                name: svc-green-blue # The NGINX service
+                port:
+                  number: 80
